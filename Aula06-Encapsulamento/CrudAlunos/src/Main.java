@@ -2,6 +2,9 @@ import com.sun.source.doctree.SinceTree;
 import entidades.Aluno;
 import entidades.GerenciarAluno;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Main {
@@ -87,5 +90,26 @@ public class Main {
 
         }
     }
+
+//    public void exportarParaTxt(String nomeArquivo) {
+//        try (PrintWriter writer = new PrintWriter(new FileWriter(nomeArquivo))) {
+//
+//            writer.println("LISTA DE ALUNOS");
+//            writer.println("-----------------------------");
+//
+//            for (Aluno aluno : ) {
+//                writer.println("Nome: " + aluno.getNome());
+//                writer.println("Nota 1: " + aluno.getNota1());
+//                writer.println("Nota 2: " + aluno.getNota2());
+//                writer.println("Média: " + aluno.getMedia());
+//                writer.println("-----------------------------");
+//            }
+//
+//            System.out.println("Arquivo gerado com sucesso: " + nomeArquivo);
+//
+//        } catch (IOException e) {
+//            System.out.println("Erro ao gerar arquivo: " + e.getMessage());
+//        }
+//    }
 
 }
