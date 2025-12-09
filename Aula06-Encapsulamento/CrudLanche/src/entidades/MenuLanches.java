@@ -9,13 +9,11 @@ public class MenuLanches {
 
     public MenuLanches() {
         // Cardápio fixo
-        lanches.addAll(Arrays.asList(
-                new Lanche("X-Burguer", 22.9),
-                new Lanche("X-Egg", 24.9),
-                new Lanche("X-Bacon", 26.9),
-                new Lanche("X-Salada", 26.9),
-                new Lanche("X-Tudo", 29.9)
-        ));
+        lanches.add(new Lanche("X-Burguer", 22.9));
+        lanches.add(new Lanche("X-Egg", 24.9));
+        lanches.add(new Lanche("X-Bacon", 26.9));
+        lanches.add(new Lanche("X-Salada", 26.9));
+        lanches.add(new Lanche("X-Tudo", 29.9));
     }
 
     public void exibirMenu() {
