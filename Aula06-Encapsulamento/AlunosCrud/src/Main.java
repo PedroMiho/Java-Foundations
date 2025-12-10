@@ -68,7 +68,10 @@ public class Main {
                 } case 5 -> {
                     System.out.println("Programa finalizado com sucesso!");
                     return;
-                } default -> {
+                } case 6 -> {
+                    gerenciarAlunos.exportarParaTxt();
+                }
+                default -> {
                     System.out.println("Escolha inválida");
                 }
 

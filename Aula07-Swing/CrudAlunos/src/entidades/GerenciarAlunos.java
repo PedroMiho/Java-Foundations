@@ -1,12 +1,16 @@
 package entidades;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 
 public class GerenciarAlunos {
     private ArrayList<Aluno> alunos = new ArrayList<Aluno>();
+    private DefaultTableModel modeloTabela;
+
+    // Construtor recebe o modelo da tabela
+    public GerenciarAlunos(DefaultTableModel modeloTabela) {
+        this.modeloTabela = modeloTabela;
+    }
 
     public void adicionarAluno(Aluno aluno) {
         alunos.add(aluno);
@@ -36,22 +40,6 @@ public class GerenciarAlunos {
         alunos.remove(id);
         System.out.println("Aluno removido com sucesso!");
     }
-
-    public void exportarParaTxt() {
-        try (PrintWriter writer = new PrintWriter(new FileWriter("alunos.txt"))) {
-            for (Aluno aluno : alunos) {
-                writer.println("ID: " + alunos.indexOf(aluno));
-                writer.println("Nome: " + aluno.getNome());
-                writer.println("Nota 1: " + aluno.getNota());
-                writer.println("Nota 2: " + aluno.getNota2());
-                writer.println("-----------------------------------");
-            }
-            System.out.println("Arquivo 'alunos.txt' salvo com sucesso!");
-        } catch (IOException e) {
-            System.out.println("Erro ao salvar o arquivo: " + e.getMessage());
-        }
-    }
-
 
 
 
